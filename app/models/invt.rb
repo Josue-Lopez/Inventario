@@ -1,0 +1,2 @@
+class Invt < ApplicationRecord
+end

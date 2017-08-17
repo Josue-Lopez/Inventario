@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Producto:</strong>
+  <%= @invt.producto %>
+</p>
+
+<p>
+  <strong>Existencia:</strong>
+  <%= @invt.existencia %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @invt.precio %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @invt.descripcion %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @invt.fecha %>
+</p>
+
+
+<%= link_to 'Editar', edit_invt_path(@invt) %> |
+<%= link_to 'Atras', invts_path %> 

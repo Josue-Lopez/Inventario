@@ -1,0 +1,46 @@
+<%= form_for(invt) do |f| %>
+  <% if invt.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(invt.errors.count, "error") %> prohibited this invt from being saved:</h2>
+
+      <ul>
+      <% invt.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="form-group">
+    <div class="field">
+    <%= f.label :producto %>
+    <%= f.text_field :producto %> 
+  </div>
+
+  <div class="field">
+    <%= f.label :existencia %>
+    <%= f.number_field :existencia %>
+  </div>
+
+  <div class="field">
+    <%= f.label :precio %>
+    <%= f.text_field :precio %>
+  </div>
+
+  <div class="field">
+    <%= f.label :descripcion %>
+    <%= f.text_area :descripcion %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fecha %>
+    <%= f.date_select :fecha %>
+  </div>
+</div>
+
+
+
+  <div class="btn btn-secondary" type="buttom">
+  <%= f.submit :Realizar %>
+  </div>
+<% end %>
